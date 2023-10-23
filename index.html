@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+<!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Estilos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/media.css">
+
+<!-- Título da página -->
+    <title>Landing Page</title>
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <ul>
+<!-- Link para a página inicial -->
+            <a href="/index.html"><li>Início</li></a>
+<!-- Links de navegação para as seções -->
+            <a href="#sobre" class="scroll-link"><li>Sobre</li></a>
+            <a href="#desafios" class="scroll-link"><li>Experiências</li></a>
+            <a href="#contato" class="scroll-link"><li>Contato</li></a>
+<!-- Botão para abrir o modal -->
+            <a href="#" id="inscreva-se-btn"><li>Contratar!</li></a>
+        </ul>
+    </header>
+<!-- Conteúdo principal da página -->
+    <main>
+<!-- Seção à esquerda -->
+        <aside>
+<!-- Título e introdução -->
+            <div id="title">
+                <h1>Jackson</h1>
+                <h1>Douglas</h1>
+            </div>
+            <h2><span>Inscreva-se Agora</span></h2>
+            <h2>Na Newsletter</h2>
+            <p>Bem-vindo à minha tribo Front-End!</p>
+            <p>Somos devs apaixonados por HTML, CSS, JS e tudo o que é UX/UI.</p>
+            <p>Junte-se à nossa comunidade Front-End para mergulhar fundo no mundo do desenvolvimento web. Troque ideias, resolva desafios e fique por dentro das últimas tendências em HTML, CSS e JavaScript.</p>
+
+<!-- Formulário de inscrição -->
+            <form>
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="Email">
+                <input type="submit" value="Enviar >">
+            </form>
+
+<!-- Seção Sobre -->
+            <h3 id="sobre">Sobre</h3>
+            <p>Salve, nobre visitante! Me chamo Jackson Douglas, sou um aventureiro da web destemido, especializado na arte da análise e desenvolvimento web. Minha jornada me levou a superar desafios incríveis e alcançar conquistas nesta vasta terra digital.</p>
+
+<!-- Desafios Superados -->
+            <h3 id="desafios">Desafios Superados</h3>
+            <p>Em minha jornada como aventureiro da web, fui confrontado com desafios complexos que testaram minha habilidade e determinação. Enfrentei cada um deles com coragem e sagacidade. Alguns desafios superados incluem:</p>
+            <ul id="list">
+                <li>Desenvolver um website responsivo!</li>
+                <li>Vetorização e tratamento de imagens!</li>
+                <li>Otimização de desempenho em websites!</li>
+                <li>Layout responsivo para dispositivos móveis!</li>
+                <li>Desenvolver screens para aplicativos móveis UX/UI!</li>
+            </ul>
+
+<!-- Nível de Experiência -->
+            <h3>Nível de XP</h3>
+            <ul id="list1">
+                <li>Inglês Avançado</li>
+                <li>Efeitos de Animação com Bibliotecas como Animate.css</li>
+                <li>Domínio das Artes da Responsividade com Media Queries!</li>
+                <li>Exploração no mundo do desenvolvimento Frontend com:<li>HTML5, CSS e JavaScript</li></li>
+            </ul>
+
+<!-- Informações de Contato -->
+            <h3 id="contato">Contato</h3>
+            <p>Bem-vindo ao meu reino digital, onde a magia do desenvolvimento web se encontra com a arte do UX/UI. Se você está sonhando com um site envolvente ou uma experiência do usuário que encante, você está no lugar certo.</p>
+            <p>E-mail: jazz.ivxx@gmail.com</p>
+            <p>Telefone: +55 45-988245857</p>
+            <p>Localização: Cascavel - Paraná</p>
+
+<!-- Links para Redes Sociais -->
+            <h4>Siga-me nas Redes Sociais!</h4>
+            <a class="cttlink" href="https://www.instagram.com/magojazz_/" target="_blank">Instagram</a>
+            <a class="cttlink" href="https://github.com/Jasckovisk" target="_blank">Github</a>
+            <a class="cttlink" href="https://www.linkedin.com/in/jackson-douglas-8b1352259/" target="_blank">LinkedIn</a>
+        </aside>
+
+<!-- Seção à direita com imagem do logo -->
+        <article>
+            <img src="components/images/Logo.png" alt="WizardWeedLogo">
+        </article>
+    </main>
+
+<!-- Modal para contratação de serviços -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+<!-- Botão para fechar o modal -->
+            <span class="close">&times;</span>
+            <h3 id="contratar">Contrate meus serviços!</h3>
+            <p>Aqui estão algumas informações sobre nossos serviços...</p>
+            <p>Estou me especializando em criar interfaces de usuário atraentes e interativas para sites e aplicativos.</p>
+            <p id="page">Páginas Web Responsivas:</p>
+            <p>Garantia de sites acessíveis e visualmente atraentes em diferentes dispositivos e tamanhos de tela, incluindo computadores, tablets e smartphones.</p>
+            <p>Utilizando tecnologias como HTML, CSS e JavaScript, garantindo que a aparência e a interatividade estejam de acordo com a visão original. Integração de APIs e serviços externos, como sistemas de pagamento ou mídias sociais, para adicionar funcionalidades dinâmicas aos sites. Correção de bugs, implemento atualizações de segurança e adiciono novos recursos para garantir que os sites permaneçam funcionais e atualizados com as últimas novidades e tecnologias.</p>
+<!-- Botão para entrar em contato via WhatsApp -->
+                    <button class="whatsapp-button" onclick="window.location.href='https://wa.me/5545988245857?text=Olá,%20estou%20interessado%20nos%20seus%20serviços!'" class="whatsapp-button">Enviar WhatsApp</button>
+                    </div>
+                </div>
+            
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+// Obtém o modal, o botão para abrir o modal e o <span> (x) para fechá-lo //
+        var modal = document.getElementById('myModal');
+        var btn = document.getElementById('inscreva-se-btn');
+        var span = document.getElementsByClassName('close')[0];
+// Oculta o modal inicialmente
+        modal.style.display = 'none';
+// Quando o usuário clica no botão, abre a modal //
+        btn.onclick = function() {
+        modal.style.display = 'block';
+        }
+// Quando o usuário clica no <span> (x), fecha a modal //
+        span.onclick = function() {
+        modal.style.display = 'none';
+        }
+// Quando o usuário clica fora da modal, fecha a modal //
+        window.onclick = function(event) {
+        if (event.target == modal) {
+        modal.style.display = 'none';
+        }
+        }
+// Código para rolagem suave ao clicar nos links de navegação //
+        $('a[href="#"]').on('click', function(event) {
+                    event.preventDefault();
+                        $('html, body').animate({ scrollTop: 0 }, 1000);
+                    });
+            
+                    $('a.scroll-link').on('click', function(event) {
+                        event.preventDefault();
+                        var targetId = $(this).attr('href');
+                        var targetOffset = $(targetId).offset().top;
+                        $('html, body').animate({ scrollTop: targetOffset }, 1000);
+                    });
+                </script>
+<!-- Rodapé da página -->
+                <footer>
+                    <p class="footer">
+                        Telefone: (45) 988-245857 | E-mail: jazz.ivxx@gmail.com
+                        <br>Cascavel, Paraná, 85803 600</br>
+                        <br>© 2023 Jackson Douglas M. S. Todos os direitos reservados.</br>
+                    </p>
+                </footer>
+            </body>
+            </html>
+            
