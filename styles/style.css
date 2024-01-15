@@ -1,0 +1,578 @@
+*{
+    padding: 0;
+    text-decoration: none;
+}
+body{
+    background-color: #343434;
+    color: aliceblue;
+    font-family: poppinsregular;
+    margin: 0 auto;
+    overflow-x: hidden;
+    align-items: center;
+}
+header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-size: 1rem;
+    margin: 0 auto;
+    top: 0;
+    right: 0;
+    background-color: #000000c4; 
+    padding: 10px;
+    z-index: 2; 
+}
+.logo{
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.966));
+    
+}
+a{
+    color: aliceblue;
+    font-family: poppinsmedium;
+}
+ul a:hover{
+    color: green;
+    transition: 0.3s all;
+}
+li{
+    display: inline-block;
+    margin: 20px;
+    font-size: 1.1rem;
+    font-family: poppinsregular;
+}
+button{
+    color: aliceblue;
+    border: solid 2px rgb(59, 105, 54);
+    border-radius: 15px;
+    font-size: 1.2rem;
+    background-color: none;
+    padding: 10px;
+    background-color: transparent;
+}
+button:hover{
+        background-color:   rgb(59, 105, 54);
+        color: aliceblue;
+        cursor: pointer;
+}
+main{
+    max-width: 1280px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 0px;
+    margin: 0 auto;
+    margin-top: 170px;
+}
+h1{
+    text-align: center;
+    align-items: center;
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+    font-size: 45px;
+    line-height: 10px;
+    font-family: poppinsmedium;
+    margin-left: -8rem;
+}
+span{
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+    color: rgb(0, 138, 41);
+}
+p{
+    font-size: 20px;
+    line-height: 28px;
+    max-width: 700px;
+    font-family: poppinslight;
+    text-align: center;
+    align-items: center;
+    margin-left: 10px;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    line-height: 25px;
+}
+.form{
+    width: 495px;
+    display: flex;
+    align-items: center;
+}
+.form img{
+    margin-top: 10px;
+}
+form [type="submit"]{
+    height: 45px;
+    width: 15%;
+    background-color: rgb(9, 105, 0);
+    color: aliceblue;
+    font-weight: bold;
+    margin-left: -8rem;
+}
+aside{
+    width: 70%;
+}
+input[type="submit"]:hover{
+    background-color:  rgb(0, 138, 41);
+    transform: scale(1.05);
+    transition: .3s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    margin-top: 13px;
+    margin-left: 1rem;
+    height: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    font-size: 15px;
+    width: 250px;
+}
+
+#imgcasa{
+    width: 450px;
+    transition: box-shadow 0.3s ease;
+    filter: drop-shadow(0 0 20px rgba(106, 107, 105, 0.37));
+    top: 13rem; /* Ajuste conforme necessário para posicionar a imagem no topo da página */
+    transform: translateX(-1%); /* Para centralizar horizontalmente a imagem */
+    z-index: 1;
+}
+.slides{
+    background-color: #ffffff00;
+    border-radius: 10px;
+    width: 425px; /* Largura da div, ajuste conforme necessário */
+    height: 350px; /* Altura da div, ajuste conforme necessário */
+    box-shadow: 0 4px 80px rrgb(0, 0, 0)
+}
+.slides img{
+    width: 100%; /* A imagem ocupará 100% da largura da div */
+    height: 100%; /* A imagem ocupará 100% da altura da div */
+    object-fit: cover; /* A imagem manterá sua proporção e cobrirá completamente a div */
+    display: flex; /* Torna a div um contêiner flexível */
+    justify-content: center; /* Centraliza horizontalmente a imagem */
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.801);
+    margin-top: -2rem;
+}
+.slides:hover{
+    transform: scale(1.05);
+    transition: .6s;
+}
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+#nome{
+    display: flex;
+    align-items: center;
+}
+#myModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+}
+#cadastromodal{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+#enviar2{
+    margin-left: 1rem;
+}
+#modalCadastroContent{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.formcadastro2{
+    display: flex;
+    align-items: center;
+}
+#formdivcadastro{
+    display: flex;   
+    width: 700px;
+}
+#formCadastro{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 400px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    border-radius: 20px;
+}
+#prevBtn {
+    left: 5px;
+}
+#nextBtn {
+    right: 5px;
+}
+#modalContent {
+    max-width: 100%;
+    max-height: 100%;
+}
+#modalContent img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Garante que a imagem se ajuste proporcionalmente */
+    transition: opacity 0.5s ease;
+}
+.container{
+    background-color: aliceblue;
+    height: 500px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #343434;
+    overflow: hidden;
+    margin-top: -2rem;
+}
+.galeria{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: #343434;
+    margin-top: 20px;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+    
+.galeria p{
+    display: flex;
+    text-align: center;
+    
+}
+h2{
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    font-family: poppinslight;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 20px;
+    height: 60px;
+    align-items: center;
+    margin: 0;
+    width: 700px;
+
+}
+.sobre{
+    height: 510px;
+    margin: 0;
+    margin-top: -100px;
+    margin-bottom: -100px;
+    display: flex;
+    justify-content: center;
+    background-color: #343434;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+}
+.sobre p{
+    margin: 10px;
+    text-align: center;
+}
+#socialmedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+}
+
+#socialmedia img{
+    height: 50px;
+    width: 50px;
+    margin: 15px;
+}
+
+.eventos{
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    background-color: #343434;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 3rem;
+}
+footer {
+    background-color: #0000005e; ;
+    display: flex;
+    height: 100px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+.default {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-social a img {
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+}
+
+.section-footer {
+    display: flex;
+    color: #fff;
+    width: 100vw;
+    max-width: 1140px;
+}
+footer{
+    height: 250px;
+}
+
+.footer-box-1 {
+    display: flex;
+    flex-direction: column;
+    
+}
+.footer-box-1, 
+.footer-box-2 {
+    font-size: 15px;
+    flex: 1;
+    margin-top: -3rem;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-box-3 {
+    font-size: 15px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #fff;
+}
+
+
+.footer-since {
+    text-align: center;
+}
+
+
+.ligth {
+    background-color: #fff;
+}
+
+.section-body.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-body.column img:hover .section-body-projectsimagen--info{
+    transform: scale(1.05);
+    transition: .6s;
+    cursor: pointer;   
+}
+
+.section-body-projectsimagens {
+    width: 100vw;
+    max-width: 1140px;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-body-projectsimagen {
+    width: 260px;
+    height: 160px;
+    margin: 10px;
+}
+
+.section-body-projectsimagen--area {
+    margin: 10px;
+    width: 240px;
+    height: 140px;
+} 
+
+
+.section-body-projectsimagen--area img{
+    width: 100%; /* A imagem ocupará 100% da largura da div */
+    height: 100%; /* A imagem ocupará 100% da altura da div */
+    object-fit: cover; /* A imagem manterá sua proporção e cobrirá completamente a div */
+    display: flex; /* Torna a div um contêiner flexível */
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.801);
+    margin-top: -2rem;
+}
+
+
+.section-body-projectsimagen--info{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: inherit;
+    height: inherit;
+    display: none;
+    justify-content: center;    
+    color: #fff;
+}
+h5{
+    text-align: center;
+    margin-top: 4rem;
+    width: 100%;
+}
+.section-body-projectsimagen--info p {
+    font-size: 12px;
+    width: 100%;
+    line-height: 12px;
+    text-align: center;
+    justify-items: center;
+}
+
+.section-body-projectsimagen--area:hover .section-body-projectsimagen--info {
+    display: flex;
+}
+
+.section-body-projectsmenu {
+    display: flex;
+    flex-direction: row;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: auto;
+}
+
+.section-body-projectsimagens {
+    width: 100vw;
+    max-width: 1140px;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.buttonProj {
+    height: 45px;
+    width: 12%;
+    background-color: rgb(9, 105, 0);
+    color: aliceblue;
+    font-family: poppinsbold;
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid rgb(0, 138, 41);
+}
+
+.buttonProj:hover{
+    background-color:  rgb(0, 138, 41);
+    transform: scale(1.05);
+    transition: .3s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#form-container {
+    background-color: #000000c4; 
+    height: 700px;
+    width: 700px;
+    justify-content: center;
+    border-radius: 20px;
+}
+#form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-container button {
+    margin-top: 10px;
+}
+
+
+.containCad {
+    background-color: transparent;
+}
+
+#name, #email, #phone {
+    margin: 0;
+}
+
+div.formInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formInput img {
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+

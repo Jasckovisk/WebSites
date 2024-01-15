@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <title>Casa Nativa</title>
+</head>
+
+<body>
+    <header  class="fixed-menu">
+        <div>
+            <img class="logo" src="components/images/logo.png" alt="Logo Casa Nativa">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#img2">Sobre</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><button id="cadastroBtn">Cadastre-se</button></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="formCadastro" class="modal-overlay" style="display: none;">
+        <div id="modalCadastroContent">
+            <h2 id="cadastromodal">Cadastro</h2>
+            <form id="formdivcadastro">
+                <div class="formcadastro2">
+                    <input type="text" id="nome" name="name" placeholder="Digite seu nome">
+                </div>
+                <div class="formcadastro2">
+                    <input type="email" id="nome" name="email" placeholder="Digite seu e-mail">
+                </div>
+                <div class="formcadastro2">
+                    <input type="phone" id="nome" name="phone_number" placeholder="Digite seu telefone">
+                </div>
+                <input id="enviar2" type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+    </section>
+    <main>
+        <aside>
+            <h1><span>Inscreva-se agora</span></h1>
+            <h1>na Newsletter</h1>
+            <p>Bem-vindo ao projeto Casa Nativa!</p>
+            <p>Aqui você encontra projetos e artistas incríveis da cena local!</p>
+            <p>Inscreva-se na nossa Newsletter para se manter atualizado sobre o movimento cultural como eventos e
+                festivais underground de Cascavel e região!</p>
+            <form>
+                    <div class="form"><img src="components/images/person.png" alt=""><input type="text" placeholder="Nome"></div>
+                    <div class="form" id="galeria"><img src="components/images/assetemail.png" alt=""><input type="email" placeholder="Email"></div>
+                    <input type="submit" value="Enviar">
+            </form>
+        </aside>
+        <article id="imgcasa"><img src="components/images/imagem casa.png" alt="casa vetor"></article>
+    </main>
+    <section class="galeria" id="galeria">
+        <div>
+            <h2>Galeria</h2>
+            <p>Aqui você encontrará um coletivo de artistas de destaque em nossa região! Visite agora a nossa galeria!</p>
+                </section>
+        </div>
+    <section class="container" id="imageCarousel">
+        <div class="slides" onclick="openModal(1)"><img src="components/images/slide1.png" alt="photo1" id="img1"></div>
+        <div class="slides" onclick="openModal(2)"><img src="components/images/slide2.png" alt="photo2" id="img2"></div>
+        <div class="slides" onclick="openModal(3)"><img src="components/images/slide3.png" alt="photo3" id="img3"></div>
+        <div class="modal-overlay" id="overlay" onclick="closeModal()"></div>
+        <div id="myModal">
+            <div id="modalContent">
+                <span class="carousel-button" id="prevBtn" onclick="plusSlides(-1)">&#10094;</span>
+                <img class="modal-image" id="modalImage">
+                <span class="carousel-button" id="nextBtn" onclick="plusSlides(1)">&#10095;</span>
+            </div>
+        </div>
+    </section>
+    <section class="container sobre">
+        <h2>Quem somos?</h2>
+        <p>Somos o projeto Casa Nativa!</p>
+        <p id="eventos">O projeto nasceu em Cascavel - PR e estamos na atividade desde 2015! O projeto visa proporcionar um espaço de
+            arte e cultura em Cascavel, realizando eventos e workshops que visam incentivar artistas a criarem novos
+            trabalhos oferecendo suporte e dando a eles visibilidade na cena local e regional!</p>
+        <p>Estamos também nas redes sociais!</p>
+        <div id="socialmedia">
+            <a href="https://www.facebook.com/profile.php?id=100090647104724"><img src="components/images/Asset1.png" alt="Iconface"></a>
+            <a href="https://api.whatsapp.com/send/?phone=55459998389811&text&type=phone_number&app_absent=0"><img src="components/images/Asset2.png" alt="Iconwpp"></a>
+            <a href="https://www.instagram.com/casanativa045/"><img src="components/images/Asset3.png" alt="Iconinsta"></a>
+        </div>
+    </section>
+    <section class="container eventos">
+        <div>
+            <h2>Eventos</h2>
+            <p>Derretendo no tédio? Não mosque!</p>
+            <p id="projetos">Fique por dentro dos principais eventos que vão rolar em nossa aréa! Mantenha-se atualizado e se inscreva também na nossa <a href="#">Newsletter</a>!</p>
+            <p>Desfrute de exposições de arte underground que desafiam as convenções, onde artistas locais e independentes têm a liberdade de explorar novas formas de expressão, desde instalações visuais impactantes até performances que desafiam a norma.</p>
+        </div>
+    </section>
+
+    <section class="default " id="projetos">
+        <div>
+            <h2>Projetos</h2>
+            <p>Fique por dentro de todos os projetos disponiveis</p>
+        </div>
+        <div class="section-body column">
+                <div class="section-body-projectsimagens">
+                    <div class="section-body-projectsimagen">
+                        <div class="section-body-projectsimagen--area">
+                            <div class="section-body-projectsimagen--info">
+                                <a href="https://www.instagram.com/obrun.artes/">
+                                    <h5>@obrunartes</h5>
+                                </a>
+                            </div>
+                            <img src="components/images/bruno.jpg"alt="oBrunArtes">
+                        </div>
+                    </div>
+                    <div class="section-body-projectsimagen">
+                        <div class="section-body-projectsimagen--area">
+                            <div class="section-body-projectsimagen--info">
+                                <a href="https://www.instagram.com/oyinytrancas/">
+                                    <h5>@oyinytrancas</h5>
+                                </a>
+                            </div>
+                            <img src="components/images/oyiny.jpg" alt="oyninTrancas">
+                        </div>
+                    </div>
+                    <div class="section-body-projectsimagen">
+                        <div class="section-body-projectsimagen--area">
+                            <div class="section-body-projectsimagen--info">
+                                <a href="https://www.instagram.com/adiala.art/">
+                                    <h5>@samueladiala</h5>
+                                </a>
+                            </div>
+                            <img src="components/images/samuel.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="section-body-projectsimagen">
+                        <div class="section-body-projectsimagen--area">
+                            <div class="section-body-projectsimagen--info">
+                                <a href="https://www.instagram.com/holistic.evo/">
+                                    <h5>@holistic.evo</h5>
+                                </a>
+                            </div>
+                            <img src="components/images/holistic.jpg"alt="">
+                        </div>
+                    </div>
+                    <div class="section-body-projectsimagen">
+                        <div class="section-body-projectsimagen--area">
+                            <div class="section-body-projectsimagen--info">
+                                <a href="https://www.instagram.com/patakori.arte/">
+                                    <h5>@patakori</h5>
+                                </a>
+                            </div>
+                            <img src="components/images/patakori.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="section-body-projectsimagen">
+                        <div class="section-body-projectsimagen--area">
+                            <div class="section-body-projectsimagen--info">
+                                <a href="https://www.instagram.com/du2dois/">
+                                    <h5>@du2dois</h5>
+                                </a>
+                            </div>
+                            <img src="components/images/du2dois.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="section-body-projectsimagen">
+                        <div class="section-body-projectsimagen--area">
+                            <div class="section-body-projectsimagen--info">
+                                <a href="https://www.instagram.com/macaco_arte/">
+                                    <h5>@macacoarte</h5>
+                                </a>
+                            </div>
+                            <img src="components/images/macaco.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="section-body-projectsimagen">
+                        <div class="section-body-projectsimagen--area">
+                            <div class="section-body-projectsimagen--info">
+                                <a href="https://www.instagram.com/magojazz_/">
+                                    <h5>@magojazz_</h5>
+                                </a>
+                            </div>
+                            <img src="components/images/magojazz.jpg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+                <a class="buttonProj" href="">+ Projetos</a>
+            
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="default">
+            <div class="section-footer">
+                <div class="footer-box-1">
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=100090647104724"><img src="components/images/Asset1.png" alt="Iconface"></a>
+                        <a href="https://api.whatsapp.com/send/?phone=55459998389811&text&type=phone_number&app_absent=0"><img src="components/images/Asset2.png" alt="Iconwpp"></a>
+                        <a href="https://www.instagram.com/casanativa045/"><img src="components/images/Asset3.png" alt="Iconinsta"></a> 
+                
+                    </div>
+                    <div class="footer-since">
+                        Powered by Jackson Douglas & Jakson Luan. Todos os direitos reservados.
+                        <br>jacksonluan@gmail.com  
+                        <br>jazz.ivxx@gmail.com
+                    </div>
+                </div>
+                <div class="footer-box-2">
+                    <br><br><br>Termos de Uso | Política de Privacidade
+                </div>
+                <div class="footer-box-3">
+                    <div class="footer-input">
+                        <input type="email" placeholder="E-mail">
+                    </div>
+                    <button>
+                        Inscreva-se
+                    </button>
+                </div>
+            </div>
+        </div>     
+    </footer>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function closeModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        document.getElementById('overlay').addEventListener('click', function (event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        function openModal(n) {
+            slideIndex = n;
+            document.getElementById('myModal').style.display = 'block';
+            document.getElementById('overlay').style.display = 'flex';
+            showSlides(slideIndex);
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var slides = document.getElementById('imageCarousel').getElementsByClassName('slides');
+            var modalImage = document.getElementById('modalImage');
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            modalImage.src = slides[slideIndex - 1].getElementsByTagName('img')[0].src;
+        }
+
+        document.getElementById('overlay').addEventListener('click', function (event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        });
+        function toggleOverlay() {
+        var overlay = document.getElementById('formCadastro');
+        var displayValue = overlay.style.display;
+
+        if (displayValue === 'none' || displayValue === '') {
+            overlay.style.display = 'flex';
+        } else {
+            overlay.style.display = 'none';
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var formCadastroButton = document.getElementById('formCadastroButton');
+        formCadastroButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Impede o comportamento padrão do formulário
+            toggleOverlay();
+        });
+    });
+    // Função para abrir o modal de cadastro
+    function openCadastroModal() {
+            document.getElementById('formCadastro').style.display = 'flex';
+        }
+
+        // Função para fechar o modal de cadastro
+        function closeCadastroModal() {
+            document.getElementById('formCadastro').style.display = 'none';
+        }
+
+        // Adicionar evento de clique ao botão de cadastro
+        document.getElementById('cadastroBtn').addEventListener('click', function () {
+            openCadastroModal();
+        });
+        function closeCadastroModal() {
+        document.getElementById('formCadastro').style.display = 'none';
+    }
+
+    // Adicionar evento de clique à área de sobreposição (overlay)
+    document.getElementById('formCadastro').addEventListener('click', function (event) {
+        if (event.target === this) {
+            closeCadastroModal();
+        }
+    });
+
+    // Adicionar evento de clique ao botão de cadastro
+    document.getElementById('cadastroBtn').addEventListener('click', function () {
+        openCadastroModal();
+    });
+    
+    // Adicionar evento de clique ao documento (page)
+    document.addEventListener('click', function (event) {
+        var formCadastro = document.getElementById('formCadastro');
+
+        // Verificar se o clique ocorreu fora do modal
+        if (!formCadastro.contains(event.target) && event.target !== document.getElementById('cadastroBtn')) {
+            closeCadastroModal();
+        }
+    });
+
+    // Função para fechar o modal de cadastro
+    function closeCadastroModal() {
+        document.getElementById('formCadastro').style.display = 'none';
+    }
+
+    // Adicionar evento de clique ao botão de cadastro
+    document.getElementById('cadastroBtn').addEventListener('click', function () {
+        openCadastroModal();
+    });
+    </script>
+</body>
+
+</html>
