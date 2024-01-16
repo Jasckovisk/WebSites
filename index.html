@@ -13,7 +13,7 @@
 
 <body>
     <header  class="fixed-menu">
-        <div>
+        <div class="boxLogo">
             <img class="logo" src="components/images/logo.png" alt="Logo Casa Nativa">
         </div>
         <nav>
@@ -56,17 +56,16 @@
             <form>
                     <div class="form"><img src="components/images/person.png" alt=""><input type="text" placeholder="Nome"></div>
                     <div class="form" id="galeria"><img src="components/images/assetemail.png" alt=""><input type="email" placeholder="Email"></div>
-                    <input type="submit" value="Enviar">
+                    <input id="inputbtn" type="submit" value="Enviar">
             </form>
         </aside>
         <article id="imgcasa"><img src="components/images/imagem casa.png" alt="casa vetor"></article>
     </main>
     <section class="galeria" id="galeria">
-        <div>
             <h2>Galeria</h2>
             <p>Aqui você encontrará um coletivo de artistas de destaque em nossa região! Visite agora a nossa galeria!</p>
-                </section>
-        </div>
+    </section>
+
     <section class="container" id="imageCarousel">
         <div class="slides" onclick="openModal(1)"><img src="components/images/slide1.png" alt="photo1" id="img1"></div>
         <div class="slides" onclick="openModal(2)"><img src="components/images/slide2.png" alt="photo2" id="img2"></div>
@@ -299,21 +298,20 @@
     document.addEventListener("DOMContentLoaded", function() {
         var formCadastroButton = document.getElementById('formCadastroButton');
         formCadastroButton.addEventListener('click', function(event) {
-            event.preventDefault(); // Impede o comportamento padrão do formulário
+            event.preventDefault(); 
             toggleOverlay();
         });
     });
-    // Função para abrir o modal de cadastro
     function openCadastroModal() {
             document.getElementById('formCadastro').style.display = 'flex';
         }
 
-        // Função para fechar o modal de cadastro
+        
         function closeCadastroModal() {
             document.getElementById('formCadastro').style.display = 'none';
         }
 
-        // Adicionar evento de clique ao botão de cadastro
+        
         document.getElementById('cadastroBtn').addEventListener('click', function () {
             openCadastroModal();
         });
@@ -321,34 +319,34 @@
         document.getElementById('formCadastro').style.display = 'none';
     }
 
-    // Adicionar evento de clique à área de sobreposição (overlay)
+    
     document.getElementById('formCadastro').addEventListener('click', function (event) {
         if (event.target === this) {
             closeCadastroModal();
         }
     });
 
-    // Adicionar evento de clique ao botão de cadastro
+    
     document.getElementById('cadastroBtn').addEventListener('click', function () {
         openCadastroModal();
     });
     
-    // Adicionar evento de clique ao documento (page)
+    
     document.addEventListener('click', function (event) {
         var formCadastro = document.getElementById('formCadastro');
 
-        // Verificar se o clique ocorreu fora do modal
+        
         if (!formCadastro.contains(event.target) && event.target !== document.getElementById('cadastroBtn')) {
             closeCadastroModal();
         }
     });
 
-    // Função para fechar o modal de cadastro
+    
     function closeCadastroModal() {
         document.getElementById('formCadastro').style.display = 'none';
     }
 
-    // Adicionar evento de clique ao botão de cadastro
+    
     document.getElementById('cadastroBtn').addEventListener('click', function () {
         openCadastroModal();
     });

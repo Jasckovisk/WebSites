@@ -58,13 +58,13 @@ button:hover{
         cursor: pointer;
 }
 main{
-    max-width: 1280px;
+    max-width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 0px;
-    margin: 0 auto;
+    margin: 0;
     margin-top: 170px;
 }
 h1{
@@ -74,7 +74,7 @@ h1{
     font-size: 45px;
     line-height: 10px;
     font-family: poppinsmedium;
-    margin-left: -8rem;
+    
 }
 span{
     text-shadow: 5px 5px 10px rgb(0, 0, 0);
@@ -92,7 +92,7 @@ p{
 form{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
     width: 100%;
     line-height: 25px;
@@ -101,6 +101,7 @@ form{
     width: 495px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .form img{
     margin-top: 10px;
@@ -111,10 +112,17 @@ form [type="submit"]{
     background-color: rgb(9, 105, 0);
     color: aliceblue;
     font-weight: bold;
-    margin-left: -8rem;
 }
 aside{
     width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#inputbtn{
+
+    margin-top: 10px;
 }
 input[type="submit"]:hover{
     background-color:  rgb(0, 138, 41);
@@ -143,6 +151,7 @@ input{
     top: 13rem; /* Ajuste conforme necessário para posicionar a imagem no topo da página */
     transform: translateX(-1%); /* Para centralizar horizontalmente a imagem */
     z-index: 1;
+    margin-right: 300px;
 }
 .slides{
     background-color: #ffffff00;
@@ -267,7 +276,6 @@ input{
     align-items: center;
     background-color: #343434;
     overflow: hidden;
-    margin-top: -2rem;
 }
 .galeria{
     height: 100px;
@@ -277,7 +285,6 @@ input{
     margin-top: 20px;
     align-items: center;
     flex-direction: column;
-    padding: 2rem;
 }
     
 .galeria p{
